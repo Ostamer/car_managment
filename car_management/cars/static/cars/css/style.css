@@ -1,0 +1,59 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff; /* Светло-голубой фон */
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Белый фон для контейнера */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007BFF; /* Синий цвет для заголовка */
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF; /* Синий цвет для ссылок */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3; /* Более темный синий при наведении */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #007BFF; /* Синий фон для кнопок */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}

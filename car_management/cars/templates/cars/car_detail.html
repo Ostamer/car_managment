@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'car_list_page' %}" class="btn btn-secondary">На главную</a>
+    <h1>{{ car.make }} {{ car.model }} ({{ car.year }})</h1>
+    <p>{{ car.description }}</p>
+
+    <h2>Комментарии</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment.content }} — <em>{{ comment.author }}</em></li>
+        {% endfor %}
+    </ul>
+
+    {% if user.is_authenticated %}
+        <h3>Оставить комментарий:</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Добавить комментарий</button>
+        </form>
+    {% endif %}
+
+    {% if user == car.owner %}
+        <a href="{% url 'car_edit_page' car.id %}">Редактировать</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'car_list_page' %}" class="btn btn-secondary">На главную</a>
+    <h1>Редактировать автомобиль</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="edit">Сохранить изменения</button>
+        <button type="submit" name="delete" onclick="return confirm('Вы уверены?')">Удалить автомобиль</button>
+    </form>
+{% endblock %}
